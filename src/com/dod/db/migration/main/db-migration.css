@@ -1,0 +1,48 @@
+.root {
+    -fx-background-image: url("fabric-background.png");
+}
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #61a2b1;
+   /* -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );*/
+}
+#source-db-title, #target-db-title {
+    -fx-font-size: 24px;
+    -fx-font-family: "Arial Black";
+    -fx-fill: #818181;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+#actiontarget {
+    -fx-fill: FIREBRICK;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+
+.bordered-titled-title {
+    -fx-background-color: white;
+    -fx-translate-y: -10; /* play around with this value when changing the title font to get a vertically centered title */
+}
+
+.bordered-titled-border {
+    -fx-content-display: top;
+    -fx-start-margin: 10;
+    -fx-border-insets: 20 15 15 15;
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+
+.bordered-titled-content {
+    -fx-padding: 26 10 10 10;
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+
+<?import com.sun.javafx.scene.control.skin.TextAreaSkin?>
+<?import com.dod.db.migration.controls.*?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+          prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.dod.db.migration.main.MainController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="150.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER"/>
+        <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="NEVER"/>
+        <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="NEVER"/>
+        <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="NEVER"/>
+        <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="NEVER"/>
+        <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="NEVER"/>
+        <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="ALWAYS"/>
+        <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER"/>
+    </rowConstraints>
+    <children>
+
+        <Text id="source-db-title" text="Source Database" textAlignment="CENTER" GridPane.columnIndex="0"
+              GridPane.columnSpan="2" GridPane.rowIndex="0"/>
+        <Label alignment="CENTER" text="DB URL" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <ComboBox fx:id="sourceDbUrlOptions" editable="true" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label alignment="CENTER" text="DB Driver" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <ComboBox fx:id="sourceDbDriverOptions" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label alignment="CENTER" text="DB User" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="sourceDbUserName" text="user7FFEF50A50" alignment="BASELINE_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Label alignment="CENTER" text="DB Password" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField fx:id="sourceDbPassword" text="AVaw06A7*" alignment="BASELINE_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+        <Button fx:id="sourceDbConnectButton" mnemonicParsing="false" text="Connect " GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <Button fx:id="sourceDbDisconnectButton" mnemonicParsing="false" text="Disconnect " GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+        <TreeView fx:id="sourceDbTreeView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0"
+                  GridPane.columnSpan="2" GridPane.rowIndex="6"/>
+        <VBox fx:id="threadGroup" GridPane.columnIndex="2" GridPane.rowIndex="6" >
+            <TitledBorder fx:id="group1" title="Group 1" />
+            <TitledBorder fx:id="group2" title="Group 2" />
+            <TitledBorder fx:id="group3" title="Group 3" />
+            <TitledBorder fx:id="group4" title="Group 4" />
+        </VBox>
+
+        <Text id="target-db-title" text="Target Database" textAlignment="CENTER" GridPane.columnIndex="3"
+              GridPane.columnSpan="2" GridPane.rowIndex="0"/>
+        <Label alignment="CENTER" text="DB URL" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        <ComboBox fx:id="targetDbUrlOptions" editable="true" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+        <Label alignment="CENTER" text="DB Driver" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+        <ComboBox fx:id="targetDbDriverOptions" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="2"/>
+        <Label alignment="CENTER" text="DB User" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+        <TextField fx:id="targetDbUserName" alignment="BASELINE_LEFT" GridPane.columnIndex="4" GridPane.rowIndex="3"/>
+        <Label alignment="CENTER" text="DB Password" GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+        <TextField fx:id="targetDbPassword" alignment="BASELINE_LEFT" GridPane.columnIndex="4" GridPane.rowIndex="4"/>
+        <Button fx:id="targetDbConnectButton" mnemonicParsing="false" text="Connect " GridPane.columnIndex="3" GridPane.rowIndex="5"/>
+        <Button fx:id="targetDbDisconnectButton" mnemonicParsing="false" text="Disconnect" GridPane.columnIndex="4" GridPane.rowIndex="5"/>
+        <TreeView fx:id="targetDbTreeView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3"
+                  GridPane.columnSpan="2" GridPane.rowIndex="6"/>
+
+        <TextArea fx:id="consoleText" GridPane.columnSpan="5" GridPane.columnIndex="0" GridPane.rowIndex="7"
+                  AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+                  AnchorPane.topAnchor="0"/>
+    </children>
+</GridPane>
